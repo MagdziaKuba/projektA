@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<div id="menu">
+		<span class="row-1 col-3">500 Terry Francois St. <br>
+		San Francisco, CA 94158</span>
+		<span id="icons" class="col-3">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJsSURBVGhD7ZlLyE1BAMc/j5RHZKcssMGCUkqRhK2lJBJJbCVlZ2nBkoUNKY+SLCysWBIbIhsL2VggyfsVid/vuJPpfnPuPX3f6Z75an71qztzzsw9/86Z85gZKxQKE2Ia7sMH+BP/dOwHvIorsTGGOI+hk9/4rkM/YTiWz7gFG7EXbfQRPSvzsGuW4mX0uF7jfByKl5MNDJETXil30GM7aMUg3Nkx4eWUw5no5zAa5GxVGsACdEcHV47sRo/vSlUaQAkyIrINshDn/vvZiKyCbMdb+AP9L/2OD/E0bkJvOimyCDILb2A4+F/4Et/2fod6vYgpsggSP9B86M7BgCHX4QV0n5uYovMgW9F+fVtYbkUN2zDrINfRfo9VpfH4yuFryAHMNogD9z3a7yIrIjbgPXRbbJZBFqN9vqhK/5mBb9BtX/B55DlM0WmQ1Wif3l5jVqH1j3GmFQ3IIohvrjEbMVU/iJEHmY1re+7EQUEeYdg3aPgUIw8SzkJsXZCU9zFFZ0G+oR9q2j+A12DYFnyFtjuDKToL8qQqNSc8/fdXpfFMmSBP0XbZjZFnGAbwCozxUzoe4OvRT2wvx7rb8ZQa7HUDXUYeZBne7umB2WddEF9fwr56BOsYeZCYcHbqgvTXD6IEaYMSJEEJ0gYlSIISpA1KkASNgzhp5o5OBrRFm0H2oG0uVaUhhKkb55naoM0gJ9A2J6vSEFw9DamnWzFJ2gqyBF0ctU2jBVGnNL+iDe6iy107JuFRtC8/muL645iq73cXeiZCiLrJuyQmDpNnOWmIRiu6MX7BHUIXHq91qHeoU7gZC4XChBgb+wu+/tWVAQWd/AAAAABJRU5ErkJggg==">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASxSURBVGhD7ZlpqFVVFMdfFmnRJDZSoVSI2TxQhpVWNOgHBdMii6CIiGgeSfoQJWoR4hBZ1IcoKvxgZmqFFVQ0BwXNI81R0Yg2qtXvd7jrcd677953z93nvns/3D/84O59z9ln73P2WnvttXu66qqrrlqtreFkuAzmw81wMRwBW0DHaw+4A36F/2rwBVwJDnYg7Q2L4FnY2Yr+mgGrYK+sVL7Oh/VgZ/+FV2EhXAXXw1J4F2JAH8GhoLaE4+Fe+BvimgOhj7aF78A/34IdoUzdBrbtAB6EfaCWDoEnwOt/hxXwU6Wc52Wo0rmQv+gV2AHK0KVgm3/AmVY0KKfXZog+fQlPVn77QiZBlRy1F8yF5yu/34TdIUUHwKYK06woqBNBJ3AQjIWvIAa1Br4HP0KvNDAvOBi2gxjMJ6AnaVaPge3cnpWa13T4DWyrP5dAr8KAtBU1Ah4C6/6Cy6GoWxwD3v8LjLQiQRshOp73eM+AjqBX/4DzLu/y7PgciEY0rsOgUTl477svK6XJ6XM1TIaYLR/DLtBH34B/7peV+upoeB/8X+O7H5z7g+kB8J6zslK6XBZeB9v8APziVYq5PDMrVWsbuAny64DGdgb430B6Grz22KyUpt0gloeXYBQMqIvAi9ZmpdpyZb4TNoDXi0b4CBhuHA7al3oB/P+orJQmX4Zt+SVqvbhMeiqN0qkTq2k97QTXwNsQAwr8Wp9DGKVfLVUxEO1jUF0HXmyYEN6rEWlX18KjELaWx9AkVaeCbTmda2oYvAgakguXNzwFzYYpzmcdhL7/HIipliJt1349nJVqyFAk3l6edyDV/5clp7F9GnRhddHzwtfAQC0Gcwx0gpaB/TFcqavwzy48LorjoCpEbqOc+vbvpKxUR64RXvh4VuosaWOGUNqv3rWuRoOhiO73SCs6SCeAL/mNrNSANKS4oYj7bbUWg/2al5Ua0HBwD+JNbnnLcJupcmmIPUihmbIvfAre6J663QY/FeyL+/fCckGLJIA2sxLOhroxTosUW1vXkcK6Eby5P/fAUMqdqXGbEbexXWHdAPkB/AkulKfBUGod+PwFWakJGarbeRuZbUUbFLbxMySFSbeADf0Ie1oxhDJYDU91hRUpMkxxj25jZlIMWYZK7vF9rjvBPomFZuXGPjZOfmL3FaU0XEexUzVwLfXlbQ/LwcbFjdMSOA/MaJSZOTcgNKbSUxXJSBbSKfAc+JAYlNRKVhSVCerYPtxqRStlOn81xCCcdmU4gikQ2RnXqpacjxjrmCzOp/ONkvVqtc4visjMS2yvfUbTgzBJPRHM+ZokngD6cM8s3B9/DfEFzEaanBsPqdoVInHudDWaSPoSkbyuh2G9R2PuWVKl19P7/QC2rTf0gClZHiPkE8Riks43ZD6qrNMrB3A65E+k3I2Wutg6VcwUxgM8kDFv685sK0jR/uDXzOe7PoRZ0DLpAk2yaQvxUNOh1nl6pAuu94XMxx4HF4LeJ8KMwCO9CyD15TQsDdHM4XuQ70igcTq3P6vg7/wRWR4HcxfoRNoqDdxV3LySKZlvof+iGHgMZm72bvDcsJGjh7bK9cPQ2vMJjbWsQ9Ouuuos9fT8D5NgeZffuuvQAAAAAElFTkSuQmCC">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQjSURBVGhD7ZlbqFRVGIBPWmppXjCIIvNBSAwNAi0r8aWgLHpJy9JUECGKvFCWRVHQhQq6ghRRGPQiChVFZmUkSkJQGFIQRQ9FFyu7UtH98n278+uePTPnzN6zth5hPvjQtWb2f/a/19rrNn09evQ4JJyAT+CX+G8J/8B38Ao85EzBTzFu7gf8rkN/w7jufuya4ThhANtxBO5Cb+RNnIplOAqvRVvGGBdhZYbhhxhPppUvYivmoZ9/jmOtqMgaNM7urFSRcWiQf7DY9HYTP7PrtGqpZ9HPb8RuGIFfobHmYsS3xTviOLwDDeBNF5mEfjaQf+Lx2C0PYDG2Xe4tXIUm25LL8XuMizZhkSNxBxZbKvwG78YUTMb3MR/fhxT39wGegg0sQruSX1iPjjxDEQeDC/Ft9F4/w5Mww8x/QhNZasVBYDyO+v+/lRiJW9BknrNCHkQrHs9KBzgG2/bDEhhnPj6NH2N+rrArOkzfgtOxDBMxXoVsmLcfWjjdQj9Xoy/Wz3iJFRXwfboG92LcuNryzvi/5OpCn+6p2Ck+fK9zuO77tb9g/xPnEbtaBDfRspyMzgER4w10pPHdM8HgWDwPfS/j6fpCX4+dsBK95iEL8cfyfIJR702UYSbGHPAuXoCd4DzhsuQv9NoN6ApjIOw5fvdRC3HDeWbjTnwZp1nRIbbE12g8u8kYLMv5GK0z2Hpr0ESq4MCwB43lDG8XrcoZGO/QYivaUEsivgPGsTs5UnXLlWi8L3C0FS1InohdKLrUuVYk4nU05q1ZqZnkibgRMsb2rJSOc9C4H2WlZpIn4rrMGFdlpXS42o0RdIYVBZInYj82hqvj1DyGxnbDVSRpIk5wf6NLjzpYi97fPVmpkaSJeNDg9XaBOliCxn8qKzWSNBFnZK93Nq+DFbj/Zgskf0divZZitVzkdjR2qyE4eSJOgsY4KyulxYMOYy/MSo0kT8QX0Rj3ZqV0ONHa2m4p7MJFkidyJhrDvUe75UQVVqNxt2WlZpInIrGcuC0rdY/nYvvQmO2WPbUkMgvd/f2OZ1vRBc7obgO8r5esaEMticidaCwXkGW2rHlMIs4RjLP/lKQFtSWSf5I/4sVYBre+z6DXd9KytSUiziVPYsR9AU/DgTgaPaiILbL/zsHBqDWRwD/yLUZ8DzE8BnXxtwA9Q1uH7ibzJyqvoGdtndCQSGyIWo3T3eJB3H0Yq+N2euDgXsb9ehluRq+/y8Jr/YXLLNSE+3fnmhvwYdyILgI9MLdlPDyvQgz5l1pY3l94D1PstQ8WHjN533bf7LTG/YS/21n5KtbRxVLjBBlHRg0bLk8APdn2A4/vH8FlaJMNJT2p2Yrxy4Hds+nHnxPxefQLQ11b4zpsSiKPm/yb0J+XNw8hHSAcKBwcHA179OjR47Clr+8/lLLZpa3TQa0AAAAASUVORK5CYII=">
+
+</span>
+		<h1>THYME</h1>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Our Vision</a></li>
+			<li><a href="#">Menu</a></li>
+			<li><a href="#">Order Online</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</div>
+
+	<section class="sekscja1" style="clear: both;">
+		<h1>Istnieje możliwość wynajęcia sali lub stolika.</h1>
+		<section class="image" style="background-image: url('1.jpg');"></section>
+		<img id="tables1" class="col-6 row-7" src="stoliki.jpg"/>
+	<div id="description1"  class="col-6 row-7" >
+		<h6>OUR RESTAURANT</h6>
+		<h2>Local fresh cuisine for everyone</h2>
+		<h5>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. </h5>
+	</div>
+	
+	<div id="description2" class="col-6 row-7" >
+		<h6>THYME NEWS</h6>
+		<h2>Spinach month
+is finally here</h2>
+		<h5>I'm a paragraph. Click here to add your own text and edit me. It’s easy.  </h5>
+	</div>
+	<img id="tables2" class="col-6 row-7" src="stoliki.jpg"/>
+<!--flex-box-->
+<div id="conteiner">
+
+	<div id="tables3" class="item">1</div>
+	<div id="tables4" class="item">2</div>
+
+	<div id="tables5" class="item">3</div>
+	<div id="tables6" class="item">4</div>
+	<div id="tables7" class="item">5</div>
+	<div id="tables8" class="item">6</div>
+
+</div>
+		<div>
+			<h5>GoGreenMag.com</h5>
+			<h2>“I'm a testimonial. Click to edit me
+and add text that says something nice
+about you and your services.”</h2>
+		</div>
+		<section class="image" style="background-image: url('2.jpg');">
+			<h1 id="zapraszamy">Reservations</h1>
+			<form action="...">
+				<!--datepicker-->
+				<input type="date">
+
+				<select name="Time">
+					<option>12:00</option>
+					<option>13:00</option>
+					<option>14:00</option>
+					<option>18:00</option>
+				</select>
+				<select name="Party Size">
+					<option>1 person</option>
+					<option>2 people</option>
+					<option>3 people</option>
+					<option>4 people</option>
+				</select>
+				<button class="button" style="background:#817C22; color:white;border-radius: 15px;">Book Now</button>
+			</form>
+		</section>
+	</section>
+
+
+ <footer id="stopka">
+ 	<h5>Join our mailing list for updates, events and recipes</h5>
+ 	<form action="#">
+ 		<input id="textBox" type="text" placeholder="Email Address"/>
+ 		<input id="button" type="submit" value="Subscribe Now" />
+ 	</form>
+      <div class="col-12 row-2">
+        <p>Copyright &copy; Magdzia 2018</p>
+      </div>
+  </footer>
+	<!--<a href="https://icons8.com">Icon pack by Icons8</a>-->
+	<script type="text/javascript" src="silnik.js"></script>
+</body>
+</html>

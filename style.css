@@ -1,0 +1,142 @@
+body{
+	
+background-color:#f2f9cf;
+background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.row-1 {height: 8.33%;}
+.row-2 {height: 16.66%;}
+.row-3 {height: 25%;}
+.row-4 {height: 33.33%;}
+.row-5 {height: 41.66%;}
+.row-6 {height: 50%;}
+.row-7 {height: 58.33%;}
+.row-8 {height: 66.66%;}
+.row-9 {height: 75%;}
+.row-10 {height: 83.33%;}
+.row-11 {height: 91.66%;}
+.row-12 {height: 100%;}
+#menu{}
+ul{
+	list-style-type: none;
+
+}
+li{
+
+}
+a{
+	text-decoration: none;
+	float: left;
+	padding: 20px;
+	color:#6a7f0e;
+	background-color: #daf75b;
+}
+#icons{
+	margin-left: 40em;
+}
+h1{
+	text-align: center;
+	color:#f7c85b;
+	font-family: Comic Sans MS;
+}
+
+section.image{
+    padding-top:10px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#description1, #description2{
+	font-family: Comic Sans MS;
+	text-align: center;
+
+
+}
+#tables1{
+clear: both;
+}
+#description1{
+float: right;
+}
+#description2{
+float: left;
+}
+#tables2{
+clear: both;
+}
+#conteiner{
+	display: grid;
+	grid-template-columns:repeat(12,100px);
+	grid-template-rows:repeat(7,100px);
+	grid-gap: 7px;
+
+	
+}
+#conteiner> div{
+	background-color: red;
+	grid-gap:3em;
+	display: flex;
+
+}
+#tables3{
+	grid-row: span 3;
+	grid-column: span 6;
+	background-image: url('1.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#tables4{
+	grid-row: span 5;
+	grid-column: span 6;
+}
+
+#tables5{
+	grid-row: span 4;
+	grid-column: span 5;
+}
+
+#tables6{
+	grid-row: span 2;
+	grid-column: span 1;
+}
+
+#tables7{
+	grid-row: span 2;
+	grid-column: span 4;
+}
+#tables8{
+	grid-row: span 2;
+	grid-column: span 3;
+}
+
+#stopka{
+	text-align: center;
+}
+#stopka >button{
+	background: #BCBE4A;
+	color:white;
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
